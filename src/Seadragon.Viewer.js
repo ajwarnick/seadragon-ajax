@@ -314,10 +314,12 @@ var SeadragonViewer,
             innerTracker.setTracking(true);     // default state
             
             // create default navigation control
-            navControl = makeNavControl(self);
-            navControl.style.marginRight = "4px";
-            navControl.style.marginBottom = "4px";
-            self.addControl(navControl, SeadragonControlAnchor.BOTTOM_RIGHT);
+            if(SeadragonConfig.loadImages != false){
+              navControl = makeNavControl(self);
+              navControl.style.marginRight = "4px";
+              navControl.style.marginBottom = "4px";
+              self.addControl(navControl, SeadragonControlAnchor.BOTTOM_RIGHT);              
+            }
             
             // mouse tracker handler for container (controls fading)
             outerTracker.enterHandler = onContainerEnter;

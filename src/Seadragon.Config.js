@@ -36,6 +36,8 @@ var SeadragonConfig = Seadragon.Config;
         
         transformOverlays: false,
         
+        loadImages: false,
+        
         // for backwards compatibility, keeping this around and defaulting to null.
         // if it ever has a non-null value, that means it was explicitly set.
         minZoomDimension: null,
